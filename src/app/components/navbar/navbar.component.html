@@ -1,0 +1,25 @@
+<p>
+  <mat-toolbar class="nav " style="background-color: #cccccc;">
+    <div>
+      <a [routerLink]="'/home/retete'"><button mat-button>Retete Culinare</button></a>
+      <a [routerLink]="'/home/magazin-ingrediente'"><button mat-button>Magazin Ingrediente</button></a>
+    </div>
+    <section>
+
+      <div class=" d-flex">
+        <app-google-auth></app-google-auth>
+        <a [routerLink]="'/home'"><button mat-button>Home</button></a>
+        <a [routerLink]="'/home/contact'"><button mat-button>Contact</button></a>
+        <a [routerLink]="'/home/despre'"><button mat-button>Despre</button></a>
+
+        <a [routerLink]="'/home/magazin-ingrediente/cosul-meu'"> <button mat-button>
+          <i class="fas fa-cart-plus" style="font-size: 25px;color: white;"></i>
+          <div style="font-size:10px" class="badge bg-danger">{{totalItem}}</div>
+        </button></a>
+
+      </div>
+    </section>
+  </mat-toolbar>
+</p>
+
+

@@ -1,0 +1,11 @@
+<span *ngIf="text.length <=wordLimit">{{text}}</span>
+
+<span *ngIf="text.length>wordLimit && !showMore">{{text.substring(0,wordLimit)}}... <button
+    class="btn btn-light text-primary fw-semibold  more-text m-2" (click)="showMore=true">Afiseaza mai
+    mult..</button>
+</span>
+
+<span *ngIf="text.length>wordLimit && showMore">
+  {{text}} <button class="btn btn-info text-primary fw-semibold more-less m-2" (click)="showMore=false">Afiseaza
+    mai putin..</button>
+</span>

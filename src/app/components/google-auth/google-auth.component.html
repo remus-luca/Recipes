@@ -1,0 +1,9 @@
+<div>
+  <button mat-button (click)="openSignInModal()" *ngIf="!(isLoggedIn$ | async)">Sign In</button>
+  <span *ngIf="(isLoggedIn$ | async)">Salutare, {{ (user)?.name}}! </span>
+  <button mat-button *ngIf="(user)?.isAdmin">Go to Admin</button>
+  <button *ngIf="(isLoggedIn$ | async)" mat-button (click)="onLogout()">Logout</button>
+  <firebase-ui *ngIf="shouldSignIn" (signInSuccessWithAuthResult)="onSignInSuccess($event)"
+    (signInFailure)="onSignInFail($event)">
+  </firebase-ui>
+</div>

@@ -1,0 +1,7 @@
+<app-navbar></app-navbar>
+<app-add-recipe-form [recipeToBeEdited]="recipeToBeEdited" (close)="onFormClose()"></app-add-recipe-form>
+<div class="container card-group">
+  <app-recipe-item *ngFor="let recipe of recipes" [recipe]="recipe" (editSuperRecipe)="editRecipe($event)">
+  </app-recipe-item>
+</div>
+<app-footer></app-footer>

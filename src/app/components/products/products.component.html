@@ -1,0 +1,44 @@
+<div class="card-top container-fluid">
+  <div class="container d-flex">
+    <div class="item">
+      <a (click)="filter('')"><img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100"
+          alt="">
+        <h4>Toate
+          Produsele</h4>
+      </a>
+    </div>
+    <div class="item">
+      <a (click)="filter('kitchen ustensil')"><img
+          src="https://lcdn.altex.ro/resize/media/catalog/category/16fa6a9aef7ffd6209d5fd9338ffa0b1/Vesela-si-accesorii-pentru-gatit.jpg"
+          alt="">
+        <h4>Vase si accesorii pentru gatit</h4>
+      </a>
+    </div>
+    <div class="item">
+      <a (click)="filter('ingredients')"><img src="https://media.publika.md/md/image/201611/w720/mancare_32439100.jpg"
+          style="width: 130px" alt="">
+        <h4>Ingrediente</h4>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="row row-cols-1 row-cols-md-4 g-4 m-3">
+  <div class="card m-3" *ngFor="let item of filterCategory | filter:searchKey:'title'" style="width: 620px;">
+    <div class="row no-gutters">
+      <div class="col-md-4 ">
+        <img src="{{item.image}}" class="card-img" alt="Image">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h2 class="card-title">{{item.title}}</h2>
+          <p class="card-text">
+            <app-more-less [text]="item.description" [wordLimit]="130"></app-more-less>
+          </p>
+          <p class="card-text fs-4 "><strong>Pret</strong> {{item.price}} Lei</p>
+          <button class="btn btn-success fw-semibold add" (click)="addToCart(item)">Adauga in cos</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

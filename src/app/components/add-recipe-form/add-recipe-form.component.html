@@ -1,0 +1,82 @@
+<button type="button" class="btn btn-info add-recipe m-4 fw-semibold" data-bs-toggle="modal"
+  data-bs-target="#staticBackdrop" data-target="#staticBackdrop">
+  Adaugare Reteta
+</button>
+
+<div class="modal top fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Retete</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="productForm">
+          <div class="form-group">
+            <label for="formGroupExampleInput4">Imagine:</label>
+            <input autocomplete="off" formControlName="imageUrl" type="text" class="form-control"
+              id="formGroupExampleInput4" placeholder="Image">
+          </div>
+          <div
+            *ngIf="productForm.controls['imageUrl'].invalid  &&( productForm.controls['imageUrl'].dirty || productForm.controls['imageUrl'].touched)">
+            <div class="fs-5  text-warning fw-semibold"
+              *ngIf="productForm.controls['imageUrl'].errors && productForm.controls['imageUrl'].errors['required']">
+              Va rugam
+              introduceti o imagine
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="formGroupExampleInput2">Nume:</label>
+            <input autocomplete="off" formControlName="name" type="text" class="form-control"
+              id="formGroupExampleInput2" placeholder="Nume">
+          </div>
+          <div
+            *ngIf="productForm.controls['name'].invalid  &&( productForm.controls['name'].dirty || productForm.controls['name'].touched)">
+            <div class="fs-5  text-danger fw-semibold"
+              *ngIf="productForm.controls['name'].errors && productForm.controls['name'].errors['required']">
+              Va rugam
+              introduceti numele
+            </div>
+            <div class="fs-5 text-warning fw-semibold"
+              *ngIf="productForm.controls['name'].errors && productForm.controls['name'].errors['minlength']">
+              Va rugam introduceti minim 3 caractere
+            </div>
+          </div>
+          <div>
+            <label for="message-text1">Ingredient:</label>
+            <textarea class="form-control" id="message-text1" formControlName="ingredients"></textarea>
+            <div
+              *ngIf="productForm.controls['ingredients'].invalid  &&( productForm.controls['ingredients'].dirty || productForm.controls['ingredients'].touched)">
+              <div class="fs-5  text-warning fw-semibold"
+                *ngIf="productForm.controls['ingredients'].errors && productForm.controls['ingredients'].errors['required']">
+                Va rugam
+                introduceti ingredientele
+              </div>
+            </div>
+            <div>
+              <label for="message-text2">Description:</label>
+              <textarea class="form-control" id="message-text2" formControlName="description"></textarea>
+              <div
+                *ngIf="productForm.controls['description'].invalid  &&( productForm.controls['description'].dirty || productForm.controls['description'].touched)">
+                <div class="fs-5  text-warning fw-semibold"
+                  *ngIf="productForm.controls['description'].errors && productForm.controls['description'].errors['required']">
+                  Va rugam
+                  introduceti descrierea
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger fw-semibold cancel" data-bs-dismiss="modal"
+          (click)="onCloseModal()">Cancel</button>
+        <button type="button" class="btn btn-primary fw-semibold save" data-bs-dismiss="modal"
+          [disabled]="!productForm.valid" (click)="addRecipe()">{{submitButtonText}}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

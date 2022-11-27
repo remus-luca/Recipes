@@ -1,0 +1,129 @@
+.card {
+  height: 75vh;
+    margin: 30px;
+    padding: 30px;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+h4,
+h6 {
+  font-weight: 400;
+}
+
+.center img {
+  text-decoration: none;
+  color: inherit;
+  border: none;
+  outline: none;
+  height: 162px;
+  width: 250px;
+  margin: 20px 0px;
+}
+
+.card-table {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: none;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: .25rem;
+}
+
+.center .btn {
+  font-size: 14px !important;
+  margin-top: 20px !important;
+  font-weight: 400;
+  padding: 12px 72px;
+  border-radius: 3px !important;
+}
+.total {
+  font-size: 20px;
+}
+th {
+  font-size: 18px;
+  padding-right: 40px;
+}
+
+td {
+  font-size: 15px;
+}
+.back {
+  color: #0dcaf0;
+  background-color: white;
+  margin-left: 1rem;
+  height: auto;
+  width: 25rem;
+}
+
+.back:hover {
+  background-color: #0dcaf0;
+  color: white;
+  width: 23rem;
+  box-shadow: 0px 0px 15px #0dcaf0, 0px 0px 45px #0dcaf0, 0px 0px 90px #0dcaf0
+}
+
+.empty {
+  background-color: white;
+  color: #dc3545;
+  margin-left: 1rem;
+  width: 11rem;
+  height: auto;
+
+}
+
+.empty:hover {
+  background-color: #dc3545;
+  color: white;
+  box-shadow: 0px 0px 15px #dc3545, 0px 0px 45px #dc3545, 0px 0px 90px #dc3545
+}
+
+.add {
+  color: #0d6efd;
+  background-color: white;
+  margin-left: 1rem;
+  height: auto;
+  width: 11rem;
+}
+
+.add:hover {
+  background-color: #0d6efd;
+  color: white;
+  box-shadow: 0px 0px 15px #0d6efd, 0px 0px 45px #0d6efd, 0px 0px 90px #0d6efd
+}
+
+.delete {
+  background-color: white;
+  color: #dc3545;
+  width: 3rem;
+  height: auto;
+
+}
+
+.delete:hover {
+  background-color: #dc3545;
+  color: white;
+  box-shadow: 0px 0px 15px #dc3545, 0px 0px 45px #dc3545, 0px 0px 90px #dc3545
+}
+
+.send {
+  color: #198754;
+  background-color: white;
+  height: auto;
+  width: 12rem;
+}
+
+.send:hover {
+  background-color: #198754;
+  color: white;
+  box-shadow: 0px 0px 15px #198754, 0px 0px 45px #198754, 0px 0px 90px #198754
+}

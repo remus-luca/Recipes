@@ -1,0 +1,53 @@
+.card {
+  max-width: 31rem;
+  height: auto;
+}
+
+li {
+  list-style-type: none;
+}
+.edit-recipe {
+  background-color: #2b2f33;
+  color: #ffc107;
+    height: auto;
+  width: 12rem;
+  margin-left: 1rem;
+}
+
+.edit-recipe:hover {
+  background-color: #ffc107;
+  color: #2b2f33;
+  width: 14rem;
+  box-shadow: 0px 0px 15px #ffc107, 0px 0px 45px #ffc107, 0px 0px 90px #ffc107
+}
+
+.delete-recipe {
+  background-color: #2b2f33;
+  color: #dc3545;
+  margin-left: 1rem;
+  width: 12rem;
+    height: auto;
+
+}
+
+.delete-recipe:hover {
+  background-color: #dc3545;
+  color: #2b2f33;
+  width: 14rem;
+  box-shadow: 0px 0px 15px #dc3545, 0px 0px 45px #dc3545, 0px 0px 90px #dc3545
+}
+.detail {
+  margin-left: 9rem;
+  margin-top: 1rem;
+  width: 13rem;
+  color: #0d6efd;
+  background-color: #2b2f33;
+  height: auto;
+}
+
+.detail:hover {
+  background-color: #0d6efd;
+  color: #2b2f33;
+  width: 13.5rem;
+  box-shadow: 0px 0px 15px #0d6efd, 0px 0px 45px #0d6efd, 0px 0px 90px #0d6efd
+}

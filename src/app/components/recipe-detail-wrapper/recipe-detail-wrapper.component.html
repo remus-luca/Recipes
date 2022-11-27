@@ -1,0 +1,3 @@
+<app-navbar></app-navbar>
+<app-add-recipe-form [recipeToBeEdited]="recipeToBeEdited" (close)="onFormClose()"></app-add-recipe-form>
+<app-recipe-item [recipe]="recipe" (editSuperRecipe)="editRecipe($event)"></app-recipe-item>
